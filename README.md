@@ -184,7 +184,7 @@ Implements a structured data lake with:
 - **Failure Tracking**: Complete request/response/error data for debugging
 
 ## ⏱️ Timeline
-I developed this project in 1 day, combining my existing knowledge of web scraping, and combining them with knowledge of my data engineering course.
+I was able to complete this project in 1 day, having experience of web scraping and combined them with knowledge of my data engineering course.
 
 ## 🤝 Contributing
 Feel free to submit issues and enhancement requests. This scraper follows ethical scraping practices with built-in rate limiting and respectful request patterns.
