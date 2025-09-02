@@ -5,6 +5,7 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![JSON](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
 
+
 ## 🔍 Description
 Professional web scraper for extracting job listings from VDAB.be (Flemish Public Employment Service). This Scrapy-based project searches for specific tech-related jobs in Belgium and systematically extracts comprehensive job data including detailed descriptions, requirements, company information, and employment conditions. Perfect for job market analysis, career research, or building job recommendation systems.
 
