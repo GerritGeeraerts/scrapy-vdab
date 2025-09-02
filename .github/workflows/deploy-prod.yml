@@ -26,8 +26,8 @@ jobs:
         push: false
         load: true  # This loads the image into the local Docker daemon
         tags: scrapy-vdab-prod:latest
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
+        # cache-from: type=gha
+        # cache-to: type=gha,mode=max
         
     - name: Test Docker image
       run: |
