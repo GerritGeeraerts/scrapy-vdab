@@ -1,2 +1,5 @@
 # Ignore datalake folder
-scrapy_vdab/data/datalake/
+data/datalake/
+logs/
+
+.scrapy/
