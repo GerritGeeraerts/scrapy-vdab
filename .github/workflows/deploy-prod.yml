@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, ubuntu-latest]  # Instead of ubuntu-latest
+    runs-on: self-hosted  # Instead of ubuntu-latest
     
     steps:
     - name: Checkout code
