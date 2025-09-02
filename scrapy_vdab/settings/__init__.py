@@ -14,7 +14,7 @@
 import os
 
 # Determine which environment settings to load
-environment = os.getenv('SCRAPY_ENV', 'development')
+environment = os.getenv('SCRAPY_VDAB_ENV', 'dev')
 
 if environment == 'production':
     from .production import *

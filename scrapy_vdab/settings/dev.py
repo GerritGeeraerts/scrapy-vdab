@@ -10,7 +10,7 @@ from .base import *
 # ============================================================================
 
 # Base directory for development (local file system)
-BASE_DIR = "/home/gg/scrapy_vdab"
+BASE_DIR = "/home/gg/PycharmProjects/scrapy-vdab/"
 
 # ============================================================================
 # LOGGING CONFIGURATION
@@ -24,19 +24,19 @@ LOG_LEVEL = "DEBUG"
 # ============================================================================
 
 # Reduce concurrency for development to make debugging easier
-CONCURRENT_REQUESTS = 1
-CONCURRENT_REQUESTS_PER_DOMAIN = 1
+# CONCURRENT_REQUESTS = 1
+# CONCURRENT_REQUESTS_PER_DOMAIN = 1
 
 # Slower download delay for development to be gentler on target servers
-DOWNLOAD_DELAY = 1.0
+# DOWNLOAD_DELAY = 1.0
 
 # AutoThrottle settings for development
-AUTOTHROTTLE_TARGET_CONCURRENCY = 1
-AUTOTHROTTLE_START_DELAY = 1
-AUTOTHROTTLE_MAX_DELAY = 10
+# AUTOTHROTTLE_TARGET_CONCURRENCY = 1
+# AUTOTHROTTLE_START_DELAY = 1
+# AUTOTHROTTLE_MAX_DELAY = 10
 
 # Enable debug output for AutoThrottle in development
-AUTOTHROTTLE_DEBUG = True
+# AUTOTHROTTLE_DEBUG = True
 
 # ============================================================================
 # DEVELOPMENT DEBUGGING

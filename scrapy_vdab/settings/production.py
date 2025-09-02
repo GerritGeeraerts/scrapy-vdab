@@ -48,15 +48,12 @@ HTTPCACHE_ENABLED = False
 # Disable Telnet Console in production for security
 TELNETCONSOLE_ENABLED = False
 
-# Disable cookies to prevent session issues in production
-COOKIES_ENABLED = False
-
 # ============================================================================
 # SLACK NOTIFICATIONS
 # ============================================================================
 
 # Enable Slack notifications in production for monitoring
-SLACK_NOTIFICATIONS_ENABLED = True
+SLACK_NOTIFICATIONS_ENABLED = False
 
 # Production-specific Slack settings
-SLACK_MAX_NOTIFICATIONS_PER_SPIDER = 5  # Reduced for production to prevent spam
+SLACK_MAX_NOTIFICATIONS_PER_SPIDER = 10

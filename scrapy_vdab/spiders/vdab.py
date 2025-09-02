@@ -8,8 +8,6 @@ import scrapy
 import json
 from scrapy import signals
 
-import scrapy_vdab.settings_dev
-
 import scrapy_vdab.settings as settings
 from scrapy_vdab.utils import (
     send_slack_notification, 
