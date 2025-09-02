@@ -1,0 +1,22 @@
+name: Build and Deploy Airflow Task Image
+
+on:
+  # 1. Trigger automatically on a push to the main branch
+  push:
+    branches:
+      - main
+  
+  # 2. This is the part that adds the manual "Run workflow" button
+  workflow_dispatch:
+
+jobs:
+  build-task-image:
+    name: Build Task Image on Production Host
+    runs-on: [self-hosted, airflow-prod] # Targets your server
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      - name: Execute Build Script
+        run: ./deploy.sh

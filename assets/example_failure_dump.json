@@ -1,0 +1,197 @@
+{
+  "timestamp": "2025-09-01T23:33:22.006391",
+  "request": {
+    "url": "https://www.vdab.be/rest/vindeenjob/v4/vacatureLight/zoek",
+    "method": "POST",
+    "headers": {
+      "b'User-Agent'": [
+        "b'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0'"
+      ],
+      "b'Accept'": [
+        "b'application/json, text/plain, */*'"
+      ],
+      "b'Accept-Language'": [
+        "b'en-US,en;q=0.8'"
+      ],
+      "b'Connection'": [
+        "b'keep-alive'"
+      ],
+      "b'Vej-Key-Monitor'": [
+        "b'b277002f-e1fa-4fc5-868a-fdab633c3851'"
+      ],
+      "b'Content-Type'": [
+        "b'application/json'"
+      ],
+      "b'Accept-Encoding'": [
+        "b'gzip, deflate, zstd'"
+      ]
+    },
+    "body": "{\"criteria\": {\"arbeidsduurCodes\": [], \"arbeidsregimeCodes\": [], \"attestCodes\": [], \"beroepCodes\": [], \"contractTypeCodes\": [], \"diplomaCodes\": [], \"ervaringCodes\": [], \"internationaalCodes\": [], \"jobdomeinCodes\": [], \"rijbewijsCodes\": [], \"taalCriteria\": {\"taalSelecties\": []}, \"trefwoord\": \"llm engineer\", \"locatieCriteria\": {\"geoLocatie\": {\"latitude\": null, \"longitude\": null}, \"locatieCode\": \"2643\", \"locatiePostcodeGemeente\": \"9451 Kerksken\", \"straalInKilometer\": 30}, \"onlineSindsCode\": \"9000\", \"sorteerVeld\": \"DATUM\"}, \"pagina\": 1, \"paginaGrootte\": 15, \"zoekmodus\": \"C1arst\"}",
+    "meta": {
+      "is_start_request": "True",
+      "download_timeout": "180.0",
+      "download_slot": "www.vdab.be",
+      "download_latency": "0.0346379280090332"
+    },
+    "cookies": {},
+    "priority": 0,
+    "dont_filter": false,
+    "callback": "parse",
+    "errback": "<lambda>"
+  },
+  "response": {
+    "url": "https://www.vdab.be/rest/vindeenjob/v4/vacatureLight/zoek",
+    "status": 400,
+    "headers": {
+      "b'Content-Type'": [
+        "b'application/problem+json'"
+      ],
+      "b'Date'": [
+        "b'Mon, 01 Sep 2025 21:33:21 GMT'"
+      ],
+      "b'P3P'": [
+        "b'CP=\"NON CUR OTPi OUR NOR UNI\"'"
+      ],
+      "b'Server'": [
+        "b'Apache'"
+      ],
+      "b'Vary'": [
+        "b'Origin'"
+      ],
+      "b'Via'": [
+        "b'1.1 www.vdab.be'"
+      ],
+      "b'Access-Control-Allow-Methods'": [
+        "b'GET, POST, PUT, OPTIONS'"
+      ],
+      "b'X-Frame-Options'": [
+        "b'SAMEORIGIN'"
+      ],
+      "b'X-Content-Type-Options'": [
+        "b'nosniff'"
+      ],
+      "b'Cache-Control'": [
+        "b'no-cache, no-store, max-age=0, must-revalidate'"
+      ],
+      "b'Samesite'": [
+        "b'lax'"
+      ],
+      "b'Expires'": [
+        "b'0'"
+      ],
+      "b'X-Xss-Protection'": [
+        "b'0'"
+      ],
+      "b'X-Vdabprocessid'": [
+        "b'48e6b3356b7b4441818aa0d9f58b4c77'"
+      ],
+      "b'Content-Security-Policy'": [
+        "b\"default-src 'self' data: vdab.be *.vdab.be *.ops.vdab.be *.vlaanderen.be; object-src vdab.be *.vdab.be *.ops.vdab.be *.mypurecloud.de *.euc1.pure.cloud; script-src 'self' blob: data: vdab.be *.vdab.be *.ops.vdab.be *.vlaanderen.be *.googletagmanager.com https://*.usercentrics.eu 'unsafe-inline' 'unsafe-eval' www.googletagmanager.com tagmanager.google.com www.google.com apis.google.com translate.google.com translate.googleapis.com developers.google.com www.google-analytics.com ssl.google-analytics.com www.gstatic.com www.googleadservices.com googleads.g.doubleclick.net maps.gstatic.com maps.googleapis.com cdnjs.cloudflare.com twitter.com platform.twitter.com abs.twimg.com connect.facebook.net api.microsofttranslator.com static.trackuity.com api.trackuity.com *.readspeaker.com twegos.com widget.twegos.com static.hotjar.com script.hotjar.com enquete.agconsult.com www.youtube.com *.contentsquare.net app.contentsquare.com https://cdn.heapanalytics.com https://heapanalytics.com *.mypurecloud.de *.nr-data.net *.newrelic.com *.euc1.pure.cloud auvious.video https://pagead2.googlesyndication.com 'wasm-unsafe-eval'; font-src 'self' data: vdab.be *.vdab.be *.ops.vdab.be *.vlaanderen.be fonts.gstatic.com maps.googleapis.com maps.gstatic.com script.hotjar.com https://heapanalytics.com; img-src 'self' data: vdab.be *.vdab.be *.ops.vdab.be *.vlaanderen.be *.google-analytics.com *.googletagmanager.com https://*.usercentrics.eu blob: x-apple-ql-id://* www.google-analytics.com www.googletagmanager.com ssl.google-analytics.com ssl.gstatic.com www.gstatic.com googleads.g.doubleclick.net www.google.com www.google.be maps.googleapis.com maps.gstatic.com translate.google.com *.googleapis.com *.googleusercontent.com developers.google.com mt.google.com twitter.com abs.twimg.com assets.grammarly.com i9.ytimg.com script.hotjar.com *.readspeaker.com i.ytimg.com www.ago.jobs *.ggpht.com *.contentsquare.net *.mypurecloud.de *.euc1.pure.cloud auvious.video https://heapanalytics.com https://pagead2.googlesyndication.com cdn.app-prd-cdn.aws.vdab-prd.be; style-src 'self' 'unsafe-inline' vdab.be *.vdab.be *.ops.vdab.be *.vlaanderen.be tagmanager.google.com fonts.googleapis.com maps.googleapis.com maps.gstatic.com translate.googleapis.com twitter.com abs.twimg.com *.readspeaker.com auvious.video https://heapanalytics.com; frame-src 'self' vdab.be *.vdab.be *.ops.vdab.be *.vlaanderen.be https://*.usercentrics.eu www.google.com google.com accounts.google.com apis.google.com www.google.com.qa www.googletagmanager.com maps.google.com youtube.com *.youtube.com youtube-nocookie.com *.youtube-nocookie.com vimeo.com *.vimeo.com prezi.com *.prezi.com youtube.be *.youtube.be *.facebook.com platform.twitter.com sdk.companywebcast.com *.readspeaker.com twegos.com widget.twegos.com vars.hotjar.com enquete.agconsult.com feedbackcvbrief.youcanbook.me sollicitatiecoach.youcanbook.me sollicitatiefilmpje.youcanbook.me secure.livechatinc.com auvious.video *.mypurecloud.de *.euc1.pure.cloud *.frcapi.com; connect-src 'self' data: vdab.be *.vdab.be *.ops.vdab.be *.google-analytics.com *.analytics.google.com *.googletagmanager.com https://*.usercentrics.eu www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net maps.googleapis.com maps.gstatic.com translate.googleapis.com *.facebook.com *.exacttargetapis.com *.hotjar.com:* vc.hotjar.io:* wss://*.hotjar.com https://*.hotjar.io *.readspeaker.com *.contentsquare.net *.contentsquare.com https://heapanalytics.com *.mypurecloud.de *.nr-data.net shyrka-prod-euc1.s3.eu-central-1.amazonaws.com *.newrelic.com *.euc1.pure.cloud wss://*.mypurecloud.de wss://*.euc1.pure.cloud auvious.video wss://auvious.video sentry.auvious.com https://www.google.com https://pagead2.googlesyndication.com https://www.googleadservices.com https://google.com *.friendlycaptcha.eu cdn.app-prd-cdn.aws.vdab-prd.be; frame-ancestors 'self' vdab.be *.vdab.be *.ops.vdab.be http://www.woodwize.be http://www.och-cfb.be https://www.onderwijskiezer.be http://www.steunpuntwerk.be; media-src 'self' vdab.be *.vdab.be *.ops.vdab.be *.readspeaker.com *.mypurecloud.de *.euc1.pure.cloud; worker-src 'self' *.vlaanderen.be blob:; child-src 'self' vdab.be *.vdab.be *.ops.vdab.be *.vlaanderen.be blob: *.mypurecloud.de *.euc1.pure.cloud; report-uri /csp-violation-report; report-to csp-violation-report;\""
+      ],
+      "b'Strict-Transport-Security'": [
+        "b'max-age=157680000'"
+      ],
+      "b'Pragma'": [
+        "b'no-cache'"
+      ]
+    },
+    "body": "{\"type\":\"about:blank\",\"title\":\"Bad Request\",\"status\":400,\"detail\":\"Failed to read request\",\"instance\":\"/vindeenjob/rest/ui/v4/vacatureLight/zoek\"}",
+    "text": "{\"type\":\"about:blank\",\"title\":\"Bad Request\",\"status\":400,\"detail\":\"Failed to read request\",\"instance\":\"/vindeenjob/rest/ui/v4/vacatureLight/zoek\"}",
+    "encoding": "cp1252",
+    "request": {
+      "url": "https://www.vdab.be/rest/vindeenjob/v4/vacatureLight/zoek",
+      "method": "POST",
+      "headers": {
+        "b'User-Agent'": [
+          "b'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0'"
+        ],
+        "b'Accept'": [
+          "b'application/json, text/plain, */*'"
+        ],
+        "b'Accept-Language'": [
+          "b'en-US,en;q=0.8'"
+        ],
+        "b'Connection'": [
+          "b'keep-alive'"
+        ],
+        "b'Vej-Key-Monitor'": [
+          "b'b277002f-e1fa-4fc5-868a-fdab633c3851'"
+        ],
+        "b'Content-Type'": [
+          "b'application/json'"
+        ],
+        "b'Accept-Encoding'": [
+          "b'gzip, deflate, zstd'"
+        ]
+      },
+      "body": "{\"criteria\": {\"arbeidsduurCodes\": [], \"arbeidsregimeCodes\": [], \"attestCodes\": [], \"beroepCodes\": [], \"contractTypeCodes\": [], \"diplomaCodes\": [], \"ervaringCodes\": [], \"internationaalCodes\": [], \"jobdomeinCodes\": [], \"rijbewijsCodes\": [], \"taalCriteria\": {\"taalSelecties\": []}, \"trefwoord\": \"llm engineer\", \"locatieCriteria\": {\"geoLocatie\": {\"latitude\": null, \"longitude\": null}, \"locatieCode\": \"2643\", \"locatiePostcodeGemeente\": \"9451 Kerksken\", \"straalInKilometer\": 30}, \"onlineSindsCode\": \"9000\", \"sorteerVeld\": \"DATUM\"}, \"pagina\": 1, \"paginaGrootte\": 15, \"zoekmodus\": \"C1arst\"}",
+      "meta": {
+        "is_start_request": "True",
+        "download_timeout": "180.0",
+        "download_slot": "www.vdab.be",
+        "download_latency": "0.0346379280090332"
+      },
+      "cookies": {},
+      "priority": 0,
+      "dont_filter": false,
+      "callback": "parse",
+      "errback": "<lambda>"
+    },
+    "meta": {
+      "is_start_request": "True",
+      "download_timeout": "180.0",
+      "download_slot": "www.vdab.be",
+      "download_latency": "0.0346379280090332"
+    },
+    "flags": [],
+    "certificate": "<Certificate Subject=b'*.vdab.be' Issuer=b'GlobalSign RSA OV SSL CA 2018'>",
+    "ip_address": "193.53.226.200"
+  },
+  "error": {
+    "type": "HttpError",
+    "value": "HTTP 400 Error: Ignoring non-200 response",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/gg/.local/lib/python3.10/site-packages/scrapy/core/spidermw.py\", line 144, in _process_spider_input\n    result = method(response=response, spider=spider)\n  File \"/home/gg/.local/lib/python3.10/site-packages/scrapy/spidermiddlewares/httperror.py\", line 64, in process_spider_input\n    raise HttpError(response, \"Ignoring non-200 response\")\nscrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response\n",
+    "request": {
+      "url": "https://www.vdab.be/rest/vindeenjob/v4/vacatureLight/zoek",
+      "method": "POST",
+      "headers": {
+        "b'User-Agent'": [
+          "b'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0'"
+        ],
+        "b'Accept'": [
+          "b'application/json, text/plain, */*'"
+        ],
+        "b'Accept-Language'": [
+          "b'en-US,en;q=0.8'"
+        ],
+        "b'Connection'": [
+          "b'keep-alive'"
+        ],
+        "b'Vej-Key-Monitor'": [
+          "b'b277002f-e1fa-4fc5-868a-fdab633c3851'"
+        ],
+        "b'Content-Type'": [
+          "b'application/json'"
+        ],
+        "b'Accept-Encoding'": [
+          "b'gzip, deflate, zstd'"
+        ]
+      },
+      "body": "{\"criteria\": {\"arbeidsduurCodes\": [], \"arbeidsregimeCodes\": [], \"attestCodes\": [], \"beroepCodes\": [], \"contractTypeCodes\": [], \"diplomaCodes\": [], \"ervaringCodes\": [], \"internationaalCodes\": [], \"jobdomeinCodes\": [], \"rijbewijsCodes\": [], \"taalCriteria\": {\"taalSelecties\": []}, \"trefwoord\": \"llm engineer\", \"locatieCriteria\": {\"geoLocatie\": {\"latitude\": null, \"longitude\": null}, \"locatieCode\": \"2643\", \"locatiePostcodeGemeente\": \"9451 Kerksken\", \"straalInKilometer\": 30}, \"onlineSindsCode\": \"9000\", \"sorteerVeld\": \"DATUM\"}, \"pagina\": 1, \"paginaGrootte\": 15, \"zoekmodus\": \"C1arst\"}",
+      "meta": {
+        "is_start_request": "True",
+        "download_timeout": "180.0",
+        "download_slot": "www.vdab.be",
+        "download_latency": "0.0346379280090332"
+      },
+      "cookies": {},
+      "priority": 0,
+      "dont_filter": false,
+      "callback": "parse",
+      "errback": "<lambda>"
+    },
+    "http_status": 400,
+    "server_message": "HTTP 400 - Unknown reason",
+    "response_body": "{\"type\":\"about:blank\",\"title\":\"Bad Request\",\"status\":400,\"detail\":\"Failed to read request\",\"instance\":\"/vindeenjob/rest/ui/v4/vacatureLight/zoek\"}"
+  }
+}
