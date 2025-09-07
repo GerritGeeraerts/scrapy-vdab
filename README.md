@@ -15,6 +15,36 @@ This project is set up in my airflow server with a Docker out of Docker (DooD) s
 ## 🔍 Description
 Professional web scraper for extracting job listings from VDAB.be (Flemish Public Employment Service). This Scrapy-based project searches for specific tech-related jobs in Belgium and systematically extracts raw json data from vdab's backed services avoiding decoding the html and giving us json structuredd data which is ideal for our bronze layer.
 
+## 🕸️ Spider Workflow
+
+The following diagram illustrates how the VDAB spider operates:
+
+```mermaid
+flowchart TD
+    A[Start] --> C1[For each query]
+    C1 --> C2[POST search request]
+    C2 --> D[parse: Save search results]
+    D --> E[Extract job IDs]
+    E --> F[For each job_id: GET job details request]
+    F --> G[parse_job_details: Save job details]
+    D --> H{More pages?}
+    H -->|Yes| C2
+    H -->|No| J[End]
+    C2 -. Error .-> K[handle_error: Log, dump data, notify]
+    F -. Error .-> K
+    G -. Error .-> K
+```
+
+### Workflow Explanation
+
+1. **🚀 Initialization**: Spider loads configuration including search queries, criteria, and paths
+2. **🔍 Search Phase**: For each query, sends POST request to VDAB's search API
+3. **📥 Parse Results**: Extracts job IDs from search results and handles pagination
+4. **🎯 Detail Scraping**: For each job ID, fetches detailed job information
+5. **💾 Data Storage**: Saves all data in structured directory format by date
+6. **⚠️ Error Handling**: Comprehensive error tracking with Slack notifications
+7. **🔄 Pagination**: Automatically handles multiple pages of search results
+
 ## 🔧 Features
 
 🔄 **Request Retry**: Automatic retry mechanisms for failed requests<br>
