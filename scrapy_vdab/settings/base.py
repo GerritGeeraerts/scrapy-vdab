@@ -146,7 +146,13 @@ VDAB_SEARCH_QUERIES = [
     "fast api", 
     "airflow", 
     "python", 
-    "llm engineer"
+    "llm engineer",
+    "langchain",
+    "langgraph",
+    "langsmith",
+    "scrapy",
+    "selenium",
+    "playwright",
 ]
 
 # Search criteria for location and filtering

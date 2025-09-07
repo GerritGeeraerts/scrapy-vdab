@@ -4,10 +4,28 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![JSON](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-222222?style=for-the-badge&logo=githubactions&logoColor=white)
+![ETL](https://img.shields.io/badge/ETL-A033FF?style=for-the-badge&logo=apacheairflow&logoColor=white)
+
+## Related Projects
+This project is set up in my airflow server with a Docker out of Docker (DooD) setup that runs the scraper daily. Check out **[✨ My Airflow Home Server ✨](https://github.com/GerritGeeraerts/airflow-home-server)** project!
 
 
 ## 🔍 Description
-Professional web scraper for extracting job listings from VDAB.be (Flemish Public Employment Service). This Scrapy-based project searches for specific tech-related jobs in Belgium and systematically extracts comprehensive job data including detailed descriptions, requirements, company information, and employment conditions. Perfect for job market analysis, career research, or building job recommendation systems.
+Professional web scraper for extracting job listings from VDAB.be (Flemish Public Employment Service). This Scrapy-based project searches for specific tech-related jobs in Belgium and systematically extracts raw json data from vdab's backed services avoiding decoding the html and giving us json structuredd data which is ideal for our bronze layer.
+
+## 🔧 Features
+
+🔄 **Request Retry**: Automatic retry mechanisms for failed requests<br>
+🔌 **Handle Connection Drops**: Scrapy handles connection drops by pausing the crawler<br>
+🔔 **Slack Notifications**: Real-time notifications for critical failures<br>
+🥉 **Bronze Layer**: Raw data storage organized by date<br>
+🗃️ **Partitioned Storage**: Year/Month/Day folder structure<br>
+🐛 **Failure Tracking**: Complete request/response/error data for debugging<br>
+🚀 **CI/CD**: Local runner that rebuild docker when the main branch changes.<br>
+🚦 **Throttling**: Throttling to respect server load.<br>
+🐳 **Containerized**: Created Docker image for running my airflow server<br>
 
 ## 📦 Repo structure
 ```
@@ -22,9 +40,12 @@ Professional web scraper for extracting job listings from VDAB.be (Flemish Publi
 │   │           └── failures/        # Error logs and debugging data
 │   ├── assets/
 │   │   └── example_failure_dump.json  # Sample failure data structure
-│   ├── settings.py              # Scrapy configuration & spider settings
+│   ├── settings              # Scrapy configuration & spider settings
+│   │   ├── base.py           # common settings
+│   │   ├── dev.py            # development specific settings
+│   │   └── production.py     # production specific settings
 │   ├── items.py                 
-│   ├── middlewares.py           
+│   ├── middlewares.py        # handle http errorcodes       
 │   ├── pipelines.py             
 │   ├── utils.py                 # Utility functions (Slack, error handling)
 │   ├── docs-endpoint-detail.md  # API documentation for job details
@@ -57,6 +78,7 @@ The spider interacts with VDAB's REST API:
 - **Documentation**: [docs-endpoint-detail.md](scrapy_vdab/docs-endpoint-detail.md)
 
 ## ⚙️ Advanced Configuration
+The project has a multiple settings files for development, and production.
 
 ### Slack Notifications
 Enable real-time error notifications:
@@ -91,7 +113,7 @@ VDAB_SEARCH_CRITERIA = {
 ## 🐛 Debugging & Monitoring
 
 ### Failure Analysis
-Failed requests generate comprehensive debug files:
+Failed requests generate comprehensive debug files aswell as a notification on slack
 ```json
 {
   "timestamp": "2024-01-15T10:30:00",
@@ -163,32 +185,11 @@ docker run -v datalake:/app/scrapy_vdab/data/datalake scrapy-vdab
 docker run -it scrapy-vdab /bin/bash
 ```
 
-## 🔧 Features
-
-### 🎯 Smart Job Search
-- **Multi-keyword Search**: Searches multiple tech-related terms simultaneously
-- **Geographic Filtering**: Focuses on jobs within 30km of Kerksken, Belgium
-- **Pagination Handling**: Automatically processes all result pages
-- **Duplicate Detection**: Identifies and handles duplicate job listings
-
-### 🛡️ Robust Error Handling
-- **Failure Recovery**: Comprehensive error logging and debugging data
-- **Request Retry**: Automatic retry mechanisms for failed requests
-- **Data Validation**: JSON parsing with fallback error handling
-- **Slack Integration**: Real-time notifications for critical failures
-
-### 🗂️ Data Lake Architecture
-Implements a structured data lake with:
-- **Bronze Layer**: Raw data storage organized by date
-- **Partitioned Storage**: Year/Month/Day folder structure
-- **Format Preservation**: Original JSON responses maintained
-- **Failure Tracking**: Complete request/response/error data for debugging
-
 ## ⏱️ Timeline
-I was able to complete this project in 1 day, having experience of web scraping and combined them with knowledge of my data engineering course.
+I was able to complete this project in 2 days.
 
 ## 🤝 Contributing
-Feel free to submit issues and enhancement requests. This scraper follows ethical scraping practices with built-in rate limiting and respectful request patterns.
+Feel free to submit issues and enhancement requests.
 
 ### Connect with me!
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gerrit-geeraerts-143488141)
